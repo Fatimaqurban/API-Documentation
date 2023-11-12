@@ -1,0 +1,941 @@
+{
+	"info": {
+		"_postman_id": "b36b3b6a-873c-4a9b-b1c3-baea52837d01",
+		"name": "Assignment02",
+		"description": "1. User Authentication Module.\n2. Admin Operations.\n3. User Interaction Module.\n4. Blog Post Management Module.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31097744"
+	},
+	"item": [
+		{
+			"name": "User Authentication Module",
+			"item": [
+				{
+					"name": "Register User 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"fatima\",\r\n    \"email\":\"fatima@gmail.com\",\r\n    \"password\":\"fati123\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register the User or Admin into DB."
+					},
+					"response": []
+				},
+				{
+					"name": "Register User 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sara\",\r\n    \"email\":\"sara@gmail.com\",\r\n    \"password\":\"sara123\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register User 2 into DB"
+					},
+					"response": []
+				},
+				{
+					"name": "Register User 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"mona\",\r\n    \"email\":\"mona@gmail.com\",\r\n    \"password\":\"mona123\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jhon\",\r\n    \"email\":\"jhon@gmail.com\",\r\n    \"password\":\"jhon123\",\r\n    \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register admin into Database"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"fatima\",\r\n    \"password\":\"fati123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login User 1 into DB (jwt token is generated)"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sara\",\r\n    \"password\":\"sara123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login User 2 into DB (jwt token is generated)"
+					},
+					"response": []
+				},
+				{
+					"name": "login User 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"username\":\"mona\",\r\n     \"password\":\"mona123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login User 3 into DB (jwt token is generated)"
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"username\":\"jhon\",\r\n    \"password\":\"Fast321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login admin into DB (jwt token is generated)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5Njk0MDk3fQ.PPqS6_yRrBWP5bGXReC6RhF52xXgEgRkWSK4gz5tFAI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/userprofile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"userprofile"
+							]
+						},
+						"description": "get he user's username and role based on the token"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTk2OTQ5ODR9.Vjsc50P8j_0D7dJuJJHC-bs3OEFToiC6zYxU9D_WZd4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/auth/adminprofile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"adminprofile"
+							]
+						},
+						"description": "get the admin's profile(username and profile) using token"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5Njk0MDk3fQ.PPqS6_yRrBWP5bGXReC6RhF52xXgEgRkWSK4gz5tFAI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fatima123@gmail.com\",\r\n    \"password\":\"Fast2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/userprofile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"userprofile"
+							]
+						},
+						"description": "using the token user can update his email and password"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTk2OTQ5ODR9.Vjsc50P8j_0D7dJuJJHC-bs3OEFToiC6zYxU9D_WZd4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jhon123@gmail.com\",\r\n    \"password\":\"Fast321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/adminprofile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"adminprofile"
+							]
+						},
+						"description": "admin can update their email and pasword using the token"
+					},
+					"response": []
+				}
+			],
+			"description": "- User registration with fields: username, email, password, role.\n    \n- User login with JWT-based authentication.\n- User profile retrieval and update.\n- Implement user roles (e.g., regular user and admin).\n- Identify the api endpoints which require authentication and implement accordingly."
+		},
+		{
+			"name": "Blog Post Management Module",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5Njk0MDk3fQ.PPqS6_yRrBWP5bGXReC6RhF52xXgEgRkWSK4gz5tFAI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"astro\",\r\n    \"content\":\"gemini is my star.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post/654f55ca512d12f1688fdf77",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post",
+								"654f55ca512d12f1688fdf77"
+							]
+						},
+						"description": "user can create a blog by usign their jwt"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhcmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTY5NzA2N30.PMpy0GfWO2qsC5oHg2Avnri8EW_igFFlxHXpFDeKfJ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Fashion\",\r\n    \"content\":\"My style, my rules\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/blog/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"posts"
+							]
+						},
+						"description": "gets all the blog post of all users"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhcmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTY5NzA2N30.PMpy0GfWO2qsC5oHg2Avnri8EW_igFFlxHXpFDeKfJ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Fashion blog\",\r\n    \"content\":\"fashion is your style!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post/654f55ca512d12f1688fdf77",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post",
+								"654f55ca512d12f1688fdf77"
+							]
+						},
+						"description": "owner can update the title and content of the blog"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5Njk0MDk3fQ.PPqS6_yRrBWP5bGXReC6RhF52xXgEgRkWSK4gz5tFAI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/blog/post/654f4ea22c6dfcd3380376e6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post",
+								"654f4ea22c6dfcd3380376e6"
+							]
+						},
+						"description": "user (owner)can delete their post"
+					},
+					"response": []
+				},
+				{
+					"name": "Give rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5Njk0MDk3fQ.PPqS6_yRrBWP5bGXReC6RhF52xXgEgRkWSK4gz5tFAI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post/rate/654f55ca512d12f1688fdf77",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post",
+								"rate",
+								"654f55ca512d12f1688fdf77"
+							]
+						},
+						"description": "all users can give ratings"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhcmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTY5NzA2N30.PMpy0GfWO2qsC5oHg2Avnri8EW_igFFlxHXpFDeKfJ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"very nice blog post, keep it up\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post/comment/654f55b8512d12f1688fdf75",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post",
+								"comment",
+								"654f55b8512d12f1688fdf75"
+							]
+						},
+						"description": "all users can coment on any blog"
+					},
+					"response": []
+				}
+			],
+			"description": "- Create, read, update, and delete blog posts (Only owner of the blog post shall be able to perform update and delete operation).\n    \n- Retrieve a list of all blog posts.\n    \n- Implement pagination and filtering for blog post listings. (When there are hundreds of blog posts, all of them should not return at once)\n    \n- Allow users to rate and comment on blog posts.\n    \n- Implement sorting and filtering options for posts."
+		},
+		{
+			"name": "User Interaction Module",
+			"item": [
+				{
+					"name": "create post 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTcwNTUyMn0.h3impiS7rOaRcYHvi-siV0u21cDuZOhyh0GQST5GUj0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"cultural food\",\r\n    \"content\":\"my cultural food is sajji\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/blog/post",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"post"
+							]
+						},
+						"description": "create post"
+					},
+					"response": []
+				},
+				{
+					"name": "Follow",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5NzAzOTczfQ.OMpof6f_zE6ijktsFvhws-i8SMDtiQumpvkNiC3UQKM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"following\":\"mona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/interaction/follow/mona",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"interaction",
+								"follow",
+								"mona"
+							]
+						},
+						"description": "users can follow any user by passing the name of user on the parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZhdGltYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk5NzAzOTczfQ.OMpof6f_zE6ijktsFvhws-i8SMDtiQumpvkNiC3UQKM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"following\":\"mona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/interaction/unfollow/mona",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"interaction",
+								"unfollow",
+								"mona"
+							]
+						},
+						"description": "users can unfollow any user by passing the name of user on the parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "Feed",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTcwNTUyMn0.h3impiS7rOaRcYHvi-siV0u21cDuZOhyh0GQST5GUj0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/interaction/feed",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"interaction",
+								"feed"
+							]
+						},
+						"description": "user will only see the post of the user whom they are following"
+					},
+					"response": []
+				}
+			],
+			"description": "- Allow users to follow other bloggers.\n    \n- Display a user's feed with posts from followed bloggers.\n    \n- Implement notifications for new followers and comments on the user's posts."
+		},
+		{
+			"name": "Search Module",
+			"item": [
+				{
+					"name": "Search By Sort",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhcmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTY5NzA2N30.PMpy0GfWO2qsC5oHg2Avnri8EW_igFFlxHXpFDeKfJ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/search/blog?keywords=&authors=&sortBy=averageRating&sortOrder=desc",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"blog"
+							],
+							"query": [
+								{
+									"key": "keywords",
+									"value": ""
+								},
+								{
+									"key": "authors",
+									"value": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "averageRating"
+								},
+								{
+									"key": "sortOrder",
+									"value": "desc"
+								}
+							]
+						},
+						"description": "sort the blogpost based on the ascending rating order"
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Keyword and Author",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5OTcwNTUyMn0.h3impiS7rOaRcYHvi-siV0u21cDuZOhyh0GQST5GUj0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/search/blog?keywords=health&authors=fatima",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"blog"
+							],
+							"query": [
+								{
+									"key": "keywords",
+									"value": "health"
+								},
+								{
+									"key": "authors",
+									"value": "fatima"
+								},
+								{
+									"key": "sortBy",
+									"value": "averageRating",
+									"disabled": true
+								},
+								{
+									"key": "sortOrder",
+									"value": "desc",
+									"disabled": true
+								}
+							]
+						},
+						"description": "sort the blogposts based on the keywords in title or content of the blog"
+					},
+					"response": []
+				}
+			],
+			"description": "- Implement a search functionality to find blog posts based on keywords, categories, and authors.\n    \n- Implement sorting and filtering options in the search results."
+		},
+		{
+			"name": "Admin Module",
+			"item": [
+				{
+					"name": "View all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTk3OTU5MDJ9.ZzZqhH4pAQu4e8gvOmVWnEaBCXrJE5uHhk757rqJvnU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"users"
+							]
+						},
+						"description": "route to fetch all the users"
+					},
+					"response": []
+				},
+				{
+					"name": "View All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTk3OTU5MDJ9.ZzZqhH4pAQu4e8gvOmVWnEaBCXrJE5uHhk757rqJvnU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/blogposts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"blogposts"
+							]
+						},
+						"description": "route to fetch all the blogpost"
+					},
+					"response": []
+				},
+				{
+					"name": "View Paticular blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impob24iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTk3OTU5MDJ9.ZzZqhH4pAQu4e8gvOmVWnEaBCXrJE5uHhk757rqJvnU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/blogposts/654f55ca512d12f1688fdf77",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"blogposts",
+								"654f55ca512d12f1688fdf77"
+							]
+						},
+						"description": "route to view any particular blog based on its ID"
+					},
+					"response": []
+				}
+			],
+			"description": "- View all users.\n    \n- List all Blog Posts, containing Title, Author, Creation Date, Average Rating.\n    \n- View a Particular Blog Post."
+		}
+	]
+}
